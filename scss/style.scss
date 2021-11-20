@@ -1,0 +1,948 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+
+//variables 
+
+@import "_colores.scss";
+$font-h2: 24px;
+$wPantalla: 100%;
+$fuentePrincipal: 'Roboto',
+sans-serif;
+
+
+/* bucle */
+$padding: 6;
+
+@for $i from 1 through $padding {
+	.padding-#{$i} {
+		padding: (10 * $i)+px;
+	}
+}
+
+
+html {
+	font-family: $fuentePrincipal;
+	box-sizing: border-box;
+}
+
+
+
+
+/*                  Encabezado                          */
+.header {
+	display: flex;
+	background-color: $bg-sectionB;
+	position: sticky;
+	top: 0;
+	padding: 0 10%;
+	width: 100%;
+	place-content: space-between;
+	box-shadow: #d3d0d0 0px 0px 3px 0.5px;
+	gap: 20px;
+	z-index: 1000;
+}
+
+
+.header__logo {
+	display: flex;
+	height: 100%;
+	margin-top: 5px;
+	justify-content: center;
+}
+
+.header__img {
+	width: 100%;
+}
+
+/********************************* Menú*********************************/
+
+.header__menu {
+	display: flex;
+	list-style: none;
+	width: 100%;
+	height: 100%;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	gap: 32px;
+}
+
+.header__li {
+	text-align: center;
+	font-size: 16px;
+	position: relative;
+	text-transform: uppercase;
+	font-weight: 500;
+
+	a {
+		text-decoration: none;
+		color: #363636;
+		transition: all .5s;
+		border-bottom: 1px solid transparent;
+
+		&:hover {
+			border-bottom: $naranja2 1px solid;
+			color: #363636;
+		}
+	}
+}
+
+
+/********************************** Banner **********************************/
+.banner {
+	display: flex;
+	background-image: url('/imagenes/bannerauto1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	width: 100%;
+	height: 100vh;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.contenedor_cotizar {
+	display: flex;
+	width: $wPantalla / 2;
+	height: 30vh;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	h1 {
+		color: white;
+		font-size: 35px;
+		font-weight: 400;
+	}
+
+	a {
+		margin-top: 5%;
+		width: 150px;
+		text-align: center;
+		height: auto;
+		font-size: 18px;
+		text-decoration: none;
+		color: white;
+		font-weight: 400;
+		background-color: $naranja2;
+		border: solid 1px $naranja2;
+		border-radius: 20px;
+		letter-spacing: 0.1rem;
+		transition: all 0.5s;
+
+		&:hover {
+			background-color: $naranja1;
+			border: $naranja1 solid 1px;
+		}
+	}
+}
+
+
+/************************* telefono contacto *************************/
+.telContacto {
+	display: flex;
+	width: 100%;
+	height: 100px;
+	background-color: $naranja2;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+
+.caja_ayuda {
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.helpTitle {
+	font-size: 18px;
+	font-weight: 500;
+}
+
+/************************* seccion como contratarnos *************************/
+.info {
+	background-color: $bg-sectionB;
+	padding: 20px 0;
+
+	h4 {
+		width: 100%;
+		text-align: center;
+		color: rgb(54, 54, 54);
+	}
+
+	p {
+		text-align: center;
+	}
+
+	ol {
+		display: flex;
+		width: 100%;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		padding: 5% 0;
+	}
+}
+
+ol {
+	.list_info {
+		margin-left: 4%;
+
+		li {
+			text-align: center;
+			font-weight: 500;
+			margin: 5%;
+			text-align: center;
+			font-size: 20px;
+		}
+	}
+}
+
+
+
+/*********** APLICACION DE CELULAR **********/
+.app {
+	display: flex;
+	width: 100%;
+	height: 70vh;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background-color: $bg-sectionA;
+}
+
+.app__banner {
+	display: flex;
+	width: $wPantalla / 2;
+	height: auto;
+	justify-content: flex-end;
+	align-items: center;
+
+	img {
+		width: 60%;
+		height: 80%;
+	}
+}
+
+.app__text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+
+	h4 {
+		font-size: 25px;
+	}
+
+	a {
+		text-decoration: none;
+		color: #000;
+		margin-top: 30px;
+	}
+}
+
+.app__text--tamaño {
+	width: $wPantalla / 2;
+	height: auto;
+}
+
+/************* Seccion por que elegirnos **********/
+.info {
+	ul {
+		display: flex;
+		width: 100%;
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: center;
+		padding: 5% 0;
+	}
+
+	//a { width: auto; padding: 4px;text-align: center;height: auto;font-size: 100px;text-decoration: none;color: #000;font-weight: 300;background-color: $naranja2;border: solid 1px $naranja2;border-radius: 10px;letter-spacing: 0.1rem;}
+}
+
+.list_info {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	width: 300px;
+
+	img {
+		width: 130px;
+		height: 130px;
+	}
+}
+
+.imgInfo {
+	border: solid 5px $naranja2;
+	border-radius: 100px;
+	padding: 8%;
+	transition: all 1.5s;
+
+	&:hover {
+		transform: rotateY(360deg);
+	}
+}
+
+ul {
+	.list_info {
+		li {
+			list-style: none;
+			font-weight: 500;
+			margin: 5%;
+			text-align: center;
+			font-size: 20px;
+		}
+	}
+}
+
+
+/* Estilos correspondientes a sección testimonials */
+.testimonials {
+	padding: 40px 0;
+	background-color: $bg-sectionA;
+
+	h4 {
+		width: 100%;
+		text-align: center;
+		color: rgb(54, 54, 54);
+	}
+}
+
+.quote {
+	color: $naranja2;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.card__item {
+	background-color: $bg-sectionB;
+	border-radius: 10px;
+	padding: 20px;
+	font-family: "Lato", sans-serif;
+	box-shadow: #d3d0d0 0px 0px 3px 0.5px;
+}
+
+.blockquote {
+	height: 50px;
+}
+
+.item__rate {
+	margin-bottom: 2rem;
+	color: #ffa500;
+}
+
+/******************** info cotizar Ultimo ********************/
+.bgCotizar {
+	display: flex;
+	background-image: url(/imagenes/banner3.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: left 60%;
+	height: 600px;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 60px;
+
+	a {
+		width: 150px;
+		padding: 10px;
+		text-align: center;
+		height: auto;
+		font-size: 18px;
+		text-decoration: none;
+		color: white;
+		font-weight: 400;
+		background-color: $naranja2;
+		border: solid 1px $naranja2;
+		border-radius: 20px;
+		letter-spacing: 0.1rem;
+		transition: all 0.5s;
+	}
+}
+
+.bgCotizar__box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	p {
+		color: white;
+		padding-top: 1%;
+		text-align: center;
+	}
+}
+
+.bgCotizar__title {
+	color: color("orange");
+	padding-top: 2%;
+	text-align: center;
+}
+
+.bgCotizar__title--font {
+	font-size: $font-h2 + 4px;
+}
+
+.bgCotizar__button {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+
+	a {
+		&:hover {
+			background-color: $naranja1;
+			border: $naranja1 solid 1px;
+		}
+	}
+}
+
+
+/*************************** COTIZAR ***************************/
+
+.formulario {
+	display: flex;
+	background-image: url('../imagenes/banner2.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 100%;
+	width: 100%;
+	height: 100vh;
+	align-items: center;
+	padding: 0 10%;
+
+	p {
+		text-align: center;
+	}
+}
+
+.sectionCotizar {
+	display: flex;
+	width: 30%;
+	background-color: white;
+	flex-direction: column;
+	justify-content: center;
+	height: 500px;
+	border-radius: 20px;
+}
+
+.datosVehiculo {
+	font-size: $font-h2 + 4px;
+	text-align: center;
+	color: rgb(54, 54, 54);
+}
+
+.formCar {
+	width: 100%;
+	height: auto;
+	padding: 0 10%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	h3 {
+		font-weight: 400;
+		padding: 0 10px;
+	}
+}
+
+.box_modeloAño {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: center;
+	padding: 20px 0;
+}
+
+.box_estadoAuto {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: center;
+	padding: 20px 0;
+}
+
+.box_equipoGas {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: center;
+	padding: 20px 0;
+}
+
+/******************   preguntas frecuentes      ******************/
+
+.faq {
+	width: 100%;
+	height: auto;
+	padding: 3% 10%;
+	background-image: radial-gradient(circle, $bg-sectionA, $bg-sectionB);
+}
+
+.faq__title {
+	text-align: center;
+	color: rgb(54, 54, 54);
+	padding-bottom: 30px;
+}
+
+.faq__title--font {
+	font-weight: 500;
+	font-size: $font-h2 + 4px;
+}
+
+
+/********************** Grid Area Nosotros ************* ************/
+/********* Estilos seccion Nosotros ************/
+.nosotros {
+	background-image: linear-gradient(to bottom, $bg-sectionA, $bg-sectionB);
+}
+
+.nosotros__contenedor {
+	display: grid;
+	grid-gap: 50px 20px;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: repeat(4, 300px);
+	grid-template-areas: 'imagen1 texto1 texto1''imagen2 texto2 texto2''valores valores valores''imagen3 texto3 texto3';
+
+	.imagen1 {
+		grid-area: imagen1;
+		width: 100%;
+		height: 100%;
+	}
+
+	.texto1 {
+		grid-area: texto1;
+		text-align: center;
+		padding: 2%;
+	}
+
+	.imagen2 {
+		grid-area: imagen2;
+	}
+
+	.texto2 {
+		grid-area: texto2;
+		text-align: center;
+		padding: 2%;
+	}
+
+	.valores {
+		border: rgba(175, 175, 175, 0.514) 1px solid;
+		background: rgb(255, 255, 255);
+		box-shadow: #d3d0d0 0px 0px 3px 0.5px;
+		border-radius: 20px;
+		grid-area: valores;
+		text-align: center;
+		padding: 2%;
+	}
+
+	.imagen3 {
+		grid-area: imagen3;
+	}
+
+	.texto3 {
+		text-align: center;
+		padding: 2%;
+		grid-area: texto3;
+	}
+}
+
+.nosotros__contenedor--tamaño {
+	height: auto;
+	width: 100%;
+	padding: 3% 10%;
+}
+
+.img1 {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.img2 {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.img3 {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.texto1 {
+	h1 {
+		font-size: $font-h2 + 4px;
+		padding-bottom: 2%;
+		font-weight: 500;
+		text-align: center;
+	}
+
+	p {
+		font-size: 16px;
+		padding-bottom: 2%;
+		font-weight: 300;
+		text-align: center;
+		line-height: 1.5rem;
+		word-spacing: 3px;
+	}
+}
+
+.texto2 {
+	h2 {
+		font-size: $font-h2 + 4px;
+		padding-bottom: 2%;
+		font-weight: 500;
+		text-align: center;
+	}
+
+	p {
+		font-size: 16px;
+		padding-bottom: 2%;
+		font-weight: 300;
+		text-align: center;
+		line-height: 1.5rem;
+		word-spacing: 3px;
+	}
+}
+
+.valores {
+	h2 {
+		font-size: $font-h2 + 4px;
+		padding-bottom: 2%;
+		font-weight: 500;
+		text-align: center;
+	}
+}
+
+.texto3 {
+	h2 {
+		font-size: $font-h2 + 4px;
+		padding-bottom: 2%;
+		font-weight: 500;
+		text-align: center;
+	}
+
+	p {
+		font-size: 16px;
+		padding-bottom: 2%;
+		font-weight: 300;
+		text-align: center;
+		line-height: 1.5rem;
+		word-spacing: 3px;
+	}
+}
+
+.contenedor_valores {
+	display: flex;
+	width: 100%;
+	height: 200px;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	align-items: center;
+
+	div {
+		display: flex;
+		height: 100%;
+		width: auto;
+		flex-flow: column nowrap;
+		justify-content: space-evenly;
+		align-items: center;
+
+		img {
+			width: 100px;
+			height: 100px;
+		}
+
+		p {
+			font-weight: 600;
+			text-align: center;
+			font-size: 18px;
+		}
+	}
+}
+
+
+/***************************** CONTACTO *****************************/
+
+.contact {
+	background-color: $bg-sectionA;
+}
+
+.contact__boxTitle {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 2%;
+}
+
+.contact__title1--font {
+
+	font-weight: 500;
+	color: rgb(54, 54, 54);
+	font-size: $font-h2 + 4px;
+
+}
+
+.contact__direccion {
+	width: 100%;
+	padding: 0 10%;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.infoUbi {
+	display: flex;
+	flex-flow: column;
+	justify-content: left;
+	align-items: flex-start;
+	width: 100%;
+	height: auto;
+
+	h2 {
+		margin: 30px 0;
+		font-size: $font-h2;
+		border-bottom: 1px solid $naranja1;
+		width: 130px;
+	}
+}
+
+.infoContacto {
+	display: flex;
+	flex-flow: column;
+	justify-content: left;
+	align-items: flex-start;
+	width: 100%;
+	height: auto;
+
+	h2 {
+		margin: 30px 0;
+		font-size: $font-h2;
+		border-bottom: 1px solid $naranja1;
+		width: 130px;
+	}
+
+	div {
+		display: flex;
+		flex-flow: row;
+	}
+}
+
+.titleParrafo {
+	padding: 0 45px;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+
+/***************************** formulario de contacto *****************************/
+.section-form {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	height: auto;
+	border-radius: 20px;
+	width: 100%;
+	padding: 5% 10%;
+	background-color: $bg-sectionB;
+}
+
+.titleForm {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+
+	h2 {
+		color: rgb(54, 54, 54);
+		font-weight: 500;
+		font-size: $font-h2 + 4px;
+	}
+}
+
+
+
+.form-contacto__data {
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	padding: 8px;
+
+	label {
+		text-align: left;
+		width: 60%;
+		padding: 5px;
+	}
+
+	input {
+		text-align: left;
+		width: 60%;
+		padding: 5px;
+	}
+}
+
+.form-contacto__data--comentario {
+	textarea {
+		text-align: left;
+		width: 60%;
+		padding: 5px;
+	}
+}
+
+.form-contacto__tyc {
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 15px 0;
+
+	input {
+		padding: 10px;
+		width: 150px;
+		border-radius: 20px;
+		border: 2px solid #000;
+		transition: all 0.5s;
+
+		&:hover {
+			border: 2px solid $naranja2;
+		}
+	}
+}
+
+
+/*********************************** pie de pagina ***********************************/
+.footer {
+	background-color: rgb(20, 20, 20);
+	width: 100%;
+	height: 200px;
+	padding: 20px 0;
+	color: white;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.footer__conteiner {
+	display: flex;
+	width: 100%;
+	height: 50%;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.footer__info {
+	width: 30%;
+	height: auto;
+
+	h5 {
+		font-size: 1rem;
+		line-height: 1.5rem;
+		font-weight: 600;
+		color: white;
+	}
+
+	p {
+		color: whitesmoke;
+		line-height: 1.5rem;
+		font-size: 14px;
+
+
+	}
+
+}
+
+
+.footer__img {
+	width: 30px;
+	height: auto;
+	margin: 2% 1%;
+}
+
+
+.footer__copyright {
+	height: auto;
+	width: 100%;
+}
+
+.footer__copy {
+	font-size: 14px;
+}
+
+
+/***************************************** RESPONSIVE  *******************************************/
+
+
+@media (max-width: 992px) {
+	header {
+		flex-flow: column nowrap;
+	}
+
+	.info ul {
+		flex-flow: column wrap;
+	}
+
+	.list_info {
+		margin: 2%;
+	}
+
+	.info ol {
+		flex-flow: column wrap;
+	}
+
+	.bgCotizar {
+		background-image: url(/imagenes/banner3_centered.jpeg);
+		padding: 40px;
+	}
+}
+
+/**************RESPONSIVE BANNER ****************/
+@media (max-width: 576px) {
+	.banner {
+		justify-content: center;
+	}
+}
+
+/******** footer ***********/
+@media (max-width: 500px) {
+	.footer {
+		height: fit-content;
+		padding: 5% 0;
+	}
+
+	.footer__conteiner {
+		flex-flow: column wrap;
+		height: auto;
+	}
+
+	.foot__info {
+		width: 50%;
+		height: auto;
+		padding: 5% 0;
+	}
+}
+
+/******* estilo componentes de bootstrap *****/
+
+.custom-accordion-button:focus {
+	border-color: #ec8d12;
+	box-shadow: 0 0 0 0.25rem rgba(236, 141, 18, 0.25);
+}

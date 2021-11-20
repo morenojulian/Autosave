@@ -1,0 +1,16 @@
+{
+  "name": "autosave",
+  "version": "1.0.0",
+  "description": "proyecto del curso de desarrollo web de coder",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "author": "Julian Moreno",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.14"
+  }
+}

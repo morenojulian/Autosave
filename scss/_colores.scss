@@ -1,0 +1,29 @@
+// naranjas
+$naranja1: #ec7c12;
+$naranja2:#ec8c12;
+$naranja-claro:#ffa500;
+
+//bg color
+$bg-sectionB:#f2efef;
+$bg-sectionA: rgb(247, 246, 246);
+
+
+$colors: ("orange": $naranja1,
+    "strongOrange": $naranja2,
+    "lightOrange":$naranja-claro,
+);
+
+/* despues eliminar */
+@each $color,
+$codigo in $colors {
+    .color-#{$color} {
+        color:#{$codigo}
+    }
+
+    ;
+
+}
+
+@function color($key) {
+    @return map-get($colors, $key);
+}
