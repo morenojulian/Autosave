@@ -329,7 +329,7 @@ ul .list_info li {
 /*************************** COTIZAR ***************************/
 .formulario {
   display: flex;
-  background-image: url("../imagenes/banner2.jpg");
+  background-image: url("../imagenes/banner2.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100%;
