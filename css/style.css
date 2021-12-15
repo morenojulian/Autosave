@@ -354,7 +354,7 @@ ul .list_info li {
 
 .sectionCotizar {
   display: flex;
-  width: 30%;
+  width: 400px;
   background-color: white;
   flex-direction: column;
   justify-content: center;
